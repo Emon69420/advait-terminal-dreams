@@ -32,7 +32,7 @@ const TerminalOutput: React.FC<TerminalOutputProps> = ({ output }) => {
     
     case 'ascii':
       return (
-        <pre className={`mb-2 font-mono text-terminal-accent whitespace-pre ${isMobile ? 'text-[0.5rem] sm:text-xs' : 'text-xs sm:text-sm'} ${isMobile ? 'overflow-x-scroll' : 'overflow-x-auto'}`}>
+        <pre className={`mb-2 font-mono text-terminal-accent whitespace-pre ${isMobile ? 'text-[0.2rem] sm:text-xs' : 'text-xs sm:text-sm'} ${isMobile ? 'overflow-x-scroll' : 'overflow-x-auto'}`}>
           {displayedText}
         </pre>
       );
