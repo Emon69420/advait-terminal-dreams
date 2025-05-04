@@ -2,6 +2,7 @@
 import React from 'react';
 import { useTypewriter } from '@/lib/typewriter';
 import { CommandOutput } from '@/utils/terminalCommands';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 interface TerminalOutputProps {
   output: CommandOutput;
@@ -12,6 +13,8 @@ const TerminalOutput: React.FC<TerminalOutputProps> = ({ output }) => {
     text: output.content,
     delay: output.type === 'ascii' ? 1 : 10,
   });
+  
+  const isMobile = useIsMobile();
 
   switch (output.type) {
     case 'text':
@@ -29,7 +32,7 @@ const TerminalOutput: React.FC<TerminalOutputProps> = ({ output }) => {
     
     case 'ascii':
       return (
-        <pre className="mb-2 font-mono text-terminal-accent text-xs sm:text-sm whitespace-pre overflow-x-auto">
+        <pre className={`mb-2 font-mono text-terminal-accent whitespace-pre ${isMobile ? 'text-[0.5rem] sm:text-xs' : 'text-xs sm:text-sm'} ${isMobile ? 'overflow-x-scroll' : 'overflow-x-auto'}`}>
           {displayedText}
         </pre>
       );
