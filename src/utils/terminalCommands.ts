@@ -156,6 +156,12 @@ const COMMANDS: Record<string, (args: string[]) => CommandOutput[]> = {
       type: 'text',
       content: '• Emon Ganguly - Vice President',
     },
+     {
+      id: crypto.randomUUID(),
+      type: 'link',
+      content: 'LinkedIn',
+      url: 'https://www.linkedin.com/company/aiclubvset/posts/?feedView=all',
+    },
     {
       id: crypto.randomUUID(),
       type: 'text',
