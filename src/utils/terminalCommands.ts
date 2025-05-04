@@ -36,7 +36,7 @@ const ASCII_ART = `
     .#&&                                                                        `;
 
 const COMMANDS: Record<string, (args: string[]) => CommandOutput[]> = {
-  help: () => [
+  menu: () => [
     {
       id: crypto.randomUUID(),
       type: 'text',
@@ -287,19 +287,19 @@ export function useTerminal() {
         output: COMMANDS.ascii([]),
       },
       {
-        command: 'echo "Welcome to advait - AI Club of VIPS"',
+        command: 'sudo login',
         output: [{ 
           id: crypto.randomUUID(), 
           type: 'text', 
-          content: 'Welcome to advait - AI Club of VIPS' 
+          content: 'Welcome to ADVAIT- Association Of Developers And Visionaries In AI Tech, It is the official AI Club OF VSET' 
         }],
       },
       {
-        command: 'echo "Type \'help\' to see available commands"',
+        command: 'Menu',
         output: [{ 
           id: crypto.randomUUID(), 
           type: 'text', 
-          content: "Type 'help' to see available commands" 
+          content: "Type 'menu' to see available commands" 
         }],
       }
     ],
@@ -329,7 +329,7 @@ export function useTerminal() {
       output = [{ 
         id: crypto.randomUUID(), 
         type: 'error', 
-        content: `Command not found: ${command}. Type 'help' for available commands.` 
+        content: `Command not found: ${command}. Type 'menu' for available commands.` 
       }];
     }
 
