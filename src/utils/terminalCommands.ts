@@ -18,39 +18,22 @@ export interface TerminalState {
   currentPath: string;
 }
 
-const ASCII_ART = `
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@%,,,@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@,,,,,,,,,,,,,,,,,,****@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@,,,,,,,,,,,,,,,,,,,,,,,,,,*******%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@#,,,,,,,,,,,****************************@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@*********************************************/@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@**************@@%***************************((/#@@@@@@@@@@@@@@@@@@
-@@@@@@@@@*@@@@@**************@@@@@******************((((((((((@@@@@@@@@@@@@@@@@@
-@@@@@@@@@//@@@@@**************@@@@@@@*****************/(((((/(@@@@@@@@@@@@@@@@@@
-@@@@@@@@@///@@@@@**************@@@@@@@@@*****************/((/(@@@@@@@@@@@@@@@@@@
-@@@@@@@@@////@@@@@***********////@@@@@@@@@@//////////////////(@@@@@@@@@@@@@@@@@@
-@@@@@@@@@/////@@@@@////////////////(@@@/////////////////////////@@@@@@@@@@@@@@@@
-@@@@@@@@@//////@@@@@///////////////////////////////////////////////(@@@@@@@@@@@@
-@@@@@@@@@(((((/&@@@@///////////////////////////////////////////////////@@@@@@@@@
-@@@@@@@@@(((((((@@@@@//////////////////////////////%@@@///////////////////@@@@@@
-@@@@@@@@@((((((((@@@@@//////////////////@@@@@@@@@@@@@@@@@@(//////////////////@@@
-@@@@@@@@@(((((((((@@@@@//////////////%@@@@@@@@@@@@@@@@@@@@@@@%//////(@@@@@@@@@@@
-@@@@@@@@@((((((((((@@@@@//////////////@@(((((((((((((((@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@(((((((((((@@@@@//////////////((((((((((((((((((/@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@((((((///@@@@@//////////((((((((((((((((((((((%@@,,@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@(////@@@@@@@@@@@@@@(((((((((((((((@@@@#@@*@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@((((((((((((@@@*@(@@@(@@*@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@///////(((((((@@@**@*@**@*@@@*@@@@@,(@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@//((@@@/@%@/@@//@/@/%@@@@(*#(@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@//@/@@@@@@@@*/*@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@/@@%@@@@@//(@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@/&/@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@/&//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@/@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@`;
+const ASCII_ART = `                                                                               
+                                                                  #@@@@@@@,     
+                                                        *   (@(@,  .@@@@        
+                                               @@@@@@@@@@   #@(     @@@@        
+                                       @@@@(   @@      @@   #@(     @@@@        
+                          %@&   @&     @&&&(   &@      @&   #&(     &&&&        
+                & *&&&&@/   (&& &&     @&&&(   &@    @&&&  (&&(     &&&&        
+       @&&&&@@/@&@@&&&@      @& &&     @&&&(  @&&&@*   @& @&&&(     &&&&        
+       &&      *&@@&&&@      @& &&     &&&&(@&&&@      @& @&&&%     &&&&        
+       &@      *&@@&&&@      @& &&     &&&&(@&&&@      @& @&&&/                 
+       %&   *@&%%@@%%%@      @% /%&    &%%/ @%%%@      &@                       
+      ,%%&&,   (%@@%%%@      @%   @%& @%,   @%@(                                
+    #%%%&      *%@@%%%@     %%      %&                                          
+    #%%%@      *%@@%%%%%%%&*                                                    
+    ####@       &.                                                              
+    .#&&                                                                        `;
 
 const COMMANDS: Record<string, (args: string[]) => CommandOutput[]> = {
   help: () => [
@@ -130,7 +113,7 @@ const COMMANDS: Record<string, (args: string[]) => CommandOutput[]> = {
     {
       id: crypto.randomUUID(),
       type: 'text',
-      content: 'Founded in 2023, we organize workshops, hackathons, and mentorship programs.',
+      content: 'Founded in 2025, we organize workshops, hackathons, and educational events.',
     },
   ],
   
@@ -166,27 +149,72 @@ const COMMANDS: Record<string, (args: string[]) => CommandOutput[]> = {
     {
       id: crypto.randomUUID(),
       type: 'text',
-      content: '• Arjun Sharma - President',
+      content: '• Chhavi Bhardwaj - President',
     },
     {
       id: crypto.randomUUID(),
       type: 'text',
-      content: '• Priya Patel - Vice President',
+      content: '• Emon Ganguly - Vice President',
     },
     {
       id: crypto.randomUUID(),
       type: 'text',
-      content: '• Raj Kumar - Technical Lead',
+      content: '• Aaditya Pratap Singh - Deputy Vice President',
     },
     {
       id: crypto.randomUUID(),
       type: 'text',
-      content: '• Neha Singh - Event Coordinator',
+      content: '• Shiven Kashyap - Tech Lead',
     },
     {
       id: crypto.randomUUID(),
       type: 'text',
-      content: '• Vikram Malhotra - Research Head',
+      content: '• Yuvraj Choudhary - Tech Lead',
+    },
+    {
+      id: crypto.randomUUID(),
+      type: 'text',
+      content: '• Ronak Gupta - Tech Lead',
+    },
+    {
+      id: crypto.randomUUID(),
+      type: 'text',
+      content: '• Mitish Raina - Event Coordinator',
+    },
+    {
+      id: crypto.randomUUID(),
+      type: 'text',
+      content: '• Ridhi Sureka - Event Coordinator',
+    },
+    {
+      id: crypto.randomUUID(),
+      type: 'text',
+      content: '• Kunal Bansal - Treasurer',
+    },
+    {
+      id: crypto.randomUUID(),
+      type: 'text',
+      content: '• Aayush Garg - Treasurer',
+    },
+    {
+      id: crypto.randomUUID(),
+      type: 'text',
+      content: '• Ansh - Secretary',
+    },
+    {
+      id: crypto.randomUUID(),
+      type: 'text',
+      content: '• Tiya Mathur - Joint Secretary',
+    },
+    {
+      id: crypto.randomUUID(),
+      type: 'text',
+      content: '• Sashwat Gupta - Joint Secretary',
+    },
+    {
+      id: crypto.randomUUID(),
+      type: 'text',
+      content: '• Ravisha Arora - Public Relations',
     },
   ],
   
@@ -213,33 +241,6 @@ const COMMANDS: Record<string, (args: string[]) => CommandOutput[]> = {
     },
   ],
   
-  projects: () => [
-    {
-      id: crypto.randomUUID(),
-      type: 'text',
-      content: 'Our Projects:',
-    },
-    {
-      id: crypto.randomUUID(),
-      type: 'text',
-      content: '1. Campus AI Assistant - A chatbot for student queries',
-    },
-    {
-      id: crypto.randomUUID(),
-      type: 'text',
-      content: '2. Sentiment Analysis for Student Feedback',
-    },
-    {
-      id: crypto.randomUUID(),
-      type: 'text',
-      content: '3. Smart Attendance System using Facial Recognition',
-    },
-    {
-      id: crypto.randomUUID(),
-      type: 'text',
-      content: '4. Research Paper on Ethical AI Implementation',
-    },
-  ],
   
   ascii: () => [
     {
@@ -259,25 +260,19 @@ const COMMANDS: Record<string, (args: string[]) => CommandOutput[]> = {
       id: crypto.randomUUID(),
       type: 'link',
       content: 'Instagram',
-      url: 'https://instagram.com/advait.aiclub',
+      url: 'https://www.instagram.com/aiclub.vips/',
     },
     {
       id: crypto.randomUUID(),
       type: 'link',
       content: 'LinkedIn',
-      url: 'https://linkedin.com/company/advait-ai-club',
+      url: 'https://www.linkedin.com/company/aiclubvset/posts/?feedView=all',
     },
     {
       id: crypto.randomUUID(),
       type: 'link',
       content: 'Twitter',
-      url: 'https://twitter.com/advait_aiclub',
-    },
-    {
-      id: crypto.randomUUID(),
-      type: 'link',
-      content: 'GitHub',
-      url: 'https://github.com/advait-aiclub',
+      url: 'https://x.com/aiclub_vset',
     },
   ],
 
