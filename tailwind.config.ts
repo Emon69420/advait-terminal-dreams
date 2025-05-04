@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,12 +19,22 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				mono: ['JetBrains Mono', 'Menlo', 'Monaco', 'Courier New', 'monospace'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				terminal: {
+					background: '#0D1117',
+					foreground: '#39FF14',
+					header: '#1A1F2C',
+					accent: '#36BDFF',
+					muted: '#6E7681',
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -70,25 +81,31 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				blink: {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0' }
+				},
+				typing: {
+					from: { width: '0' },
+					to: { width: '100%' }
+				},
+				'scan-line': {
+					'0%': { transform: 'translateY(0)' },
+					'100%': { transform: 'translateY(100vh)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				blink: 'blink 1s step-end infinite',
+				'scan-line': 'scan-line 8s linear infinite',
 			}
 		}
 	},
