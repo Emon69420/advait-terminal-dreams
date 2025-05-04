@@ -45,17 +45,7 @@ const COMMANDS: Record<string, (args: string[]) => CommandOutput[]> = {
     {
       id: crypto.randomUUID(),
       type: 'text',
-      content: 'help - Display this help message',
-    },
-    {
-      id: crypto.randomUUID(),
-      type: 'text',
-      content: 'about - About advait AI Club',
-    },
-    {
-      id: crypto.randomUUID(),
-      type: 'text',
-      content: 'clear - Clear the terminal',
+      content: 'about - About advait',
     },
     {
       id: crypto.randomUUID(),
@@ -65,19 +55,14 @@ const COMMANDS: Record<string, (args: string[]) => CommandOutput[]> = {
     {
       id: crypto.randomUUID(),
       type: 'text',
-      content: 'team - Display team members',
+      content: 'office - Display office bearers',
     },
     {
       id: crypto.randomUUID(),
       type: 'text',
-      content: 'contact - Contact information',
+      content: 'socials - Our social media links',
     },
-    {
-      id: crypto.randomUUID(),
-      type: 'text',
-      content: 'projects - Our projects',
-    },
-    {
+      {
       id: crypto.randomUUID(),
       type: 'text',
       content: 'ascii - Display ASCII art',
@@ -85,7 +70,7 @@ const COMMANDS: Record<string, (args: string[]) => CommandOutput[]> = {
     {
       id: crypto.randomUUID(),
       type: 'text',
-      content: 'socials - Our social media links',
+      content: 'clear - Clear the terminal',
     },
   ],
   
@@ -93,7 +78,7 @@ const COMMANDS: Record<string, (args: string[]) => CommandOutput[]> = {
     {
       id: crypto.randomUUID(),
       type: 'text',
-      content: 'advait - AI Club of VIPS',
+      content: 'ADVAIT - Association Of Developers And Visionaries In AI Tech',
     },
     {
       id: crypto.randomUUID(),
@@ -126,17 +111,7 @@ const COMMANDS: Record<string, (args: string[]) => CommandOutput[]> = {
     {
       id: crypto.randomUUID(),
       type: 'text',
-      content: '• May 15, 2025 - AI Workshop: Introduction to Machine Learning',
-    },
-    {
-      id: crypto.randomUUID(),
-      type: 'text',
-      content: '• June 10, 2025 - Hackathon: Solving Real-world Problems with AI',
-    },
-    {
-      id: crypto.randomUUID(),
-      type: 'text',
-      content: '• July 5, 2025 - Guest Lecture: Future of AI and Ethics',
+      content: '• NEXT SEM TBD - Unlocking Python',
     },
   ],
   
