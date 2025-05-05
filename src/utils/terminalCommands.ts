@@ -115,7 +115,7 @@ const COMMANDS: Record<string, (args: string[]) => CommandOutput[]> = {
     },
   ],
   
-  team: () => [
+  office: () => [
     {
       id: crypto.randomUUID(),
       type: 'text',
